@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:summary_project/homeScreen.dart';
+import 'package:summary_project/searchScreen.dart';
+import 'package:summary_project/menuScreen.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -14,8 +17,8 @@ class _HomeState extends State<Home> {
 
   List<Widget> _widgetOptions = <Widget>[
     HomeScreenPage(),
-    Text('Summary Menu'),
-    Text('Summary Search'),
+    MenuScreenPage(),
+    SearchScreenPage(),
   ];
 
   void _onItemTap(int index){
@@ -36,7 +39,7 @@ class _HomeState extends State<Home> {
         items: const<BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home_sharp, size: 26, color: Color.fromRGBO(161, 159, 243, 1.0),), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_sharp, size: 26, color: Color.fromRGBO(161, 159, 243, 1.0),), label: 'Menu'),
-          BottomNavigationBarItem(icon: Icon(Icons.search_sharp, size: 26, color: Color.fromRGBO(161, 159, 243, 1.0),), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.search_sharp, size: 26, color: Color.fromRGBO(161, 159, 243, 1.0),), label: 'Search', ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
@@ -44,4 +47,5 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
 

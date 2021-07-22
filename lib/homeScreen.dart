@@ -8,21 +8,23 @@ class HomeScreenPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromRGBO(161, 159, 243, 1.0),
       body:
-      Column(
+        Column(
         mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(padding: EdgeInsets.only(left: 20)),
-          Column(
-            // mainAxisAlignment: MainAxisAlignment.start,
+          Padding(padding: EdgeInsets.only(top: 70)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Padding(padding: EdgeInsets.only(top: 60, right: 50)),
-              Text('Summary', style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w600),),
+              Padding(padding: EdgeInsets.only(left: 30)),
+              Text('Summary', style: TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w700),),
             ],
           ),
-          Row(
+          Column(
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(padding: EdgeInsets.only(top: 80, left: 30)),
-              Text('Cart', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),),
+              Padding(padding: EdgeInsets.only(top: 20, left: 110)),
+              Text('Cart', style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w600),),
           ],)
         ],
       ),
