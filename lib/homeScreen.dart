@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
-class HomeScreenPage extends StatelessWidget {
+class HomeScreenPage extends StatefulWidget {
   const HomeScreenPage({Key? key}) : super(key: key);
+
+  @override
+  _HomeScreenPageState createState() => _HomeScreenPageState();
+}
+
+class _HomeScreenPageState extends State<HomeScreenPage> {
+
+  late List itemCount = [];
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +29,16 @@ class HomeScreenPage extends StatelessWidget {
             ],
           ),
           Column(
-            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(padding: EdgeInsets.only(top: 20, left: 110)),
               Text('Cart', style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w600),),
-          ],)
+          ],),
+          // ListView.builder(
+          //     itemCount: itemCount.length,
+          //     itemBuilder: (BuildContext context, int index) {
+          //       return Text('Wassup');
+          //     },
+          // ),
         ],
       ),
     );

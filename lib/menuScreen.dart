@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MenuScreenPage extends StatelessWidget {
+class MenuScreenPage extends StatefulWidget {
   const MenuScreenPage({Key? key}) : super(key: key);
 
+  @override
+  _MenuScreenPageState createState() => _MenuScreenPageState();
+}
+
+class _MenuScreenPageState extends State<MenuScreenPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
