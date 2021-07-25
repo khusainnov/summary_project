@@ -36,10 +36,21 @@ class _HomeState extends State<Home> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         items: const<BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home_sharp, size: 26, color: Color.fromRGBO(161, 159, 243, 1.0),), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_sharp, size: 26, color: Color.fromRGBO(161, 159, 243, 1.0),), label: 'Menu'),
-          BottomNavigationBarItem(icon: Icon(Icons.search_sharp, size: 26, color: Color.fromRGBO(161, 159, 243, 1.0),), label: 'Search', ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined, size: 26, color: Color.fromRGBO(169, 169, 208, 1.0),),
+              activeIcon: Icon(Icons.home, size: 26, color: Color.fromRGBO(161, 159, 243, 1.0),),
+              label: 'Home' ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_circle_outline_sharp, size: 26, color: Color.fromRGBO(169, 169, 208, 1.0),),
+              activeIcon: Icon(Icons.add_circle_outlined, size: 26, color: Color.fromRGBO(161, 159, 243, 1.0)),
+              label: 'Menu'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search_sharp, size: 26, color: Color.fromRGBO(169, 169, 208, 1.0),),
+            activeIcon: ImageIcon(AssetImage('assets/searchPressed.png'), size: 26, color: Color.fromRGBO(161, 159, 243, 1.0),),
+            label: 'Search', ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTap,
