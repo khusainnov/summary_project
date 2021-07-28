@@ -69,7 +69,7 @@ flutter:
 
 
   assets:
-    - assets/menu.jpeg
+    - assets/menu.png
     - assets/searchPressed.png
 
   # fonts:

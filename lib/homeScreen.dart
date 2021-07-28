@@ -32,16 +32,19 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
             children: [
               Padding(padding: EdgeInsets.only(top: 20, left: 110)),
               Text('Cart', style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w600),),
-          ],),
-          // ListView.builder(
-          //     itemCount: itemCount.length,
-          //     itemBuilder: (BuildContext context, int index) {
-          //       return Text('Wassup');
-          //     },
-          // ),
+            ],
+          ),
         ],
       ),
     );
   }
 }
+
+/* body: Container(
+     child: Container(
+       child: Container(),
+     ),
+   ),
+* попробовать body прописать через ListView
+*/
 
